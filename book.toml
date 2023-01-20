@@ -1,0 +1,21 @@
+[book]
+title = "JS by Example"
+description = "JS by Example (JSBE) is a collection of runnable examples that illustrate various JavaScript concepts."
+authors = ["MD-REHMAN"]
+language = "en"
+multilingual = false
+src = "src"
+
+[output.html.playpen]
+editable = true
+editor = "ace"
+line-numbers = true
+
+[output.html.fold]
+enable = true
+
+[output.html]
+git-repository-url = "https://github.com/rust-lang/rust-by-example"
+
+[rust]
+edition = "2021"
