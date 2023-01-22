@@ -6,7 +6,7 @@ JavaScript by Example (JSBE) is a collection of runnable examples that illustrat
 
 Now let's begin!
 
-- [Hello World](book/hello-world.md)- Learn how and where to run JS.
+- [Hello World](/book/hello-world.md)- Learn how and where to run JS.
 <!-- - [Hello World](./core/getting-started.md)- Start with a traditional Hello World program. -->
 
 - [Type and Value]() - Learn about string, number, boolean, array and object.

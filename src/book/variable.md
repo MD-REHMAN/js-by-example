@@ -15,7 +15,7 @@ Whereas the variable vreated using the `let` keyword have block scope.
 And `const` are very similar to `let` but a `const` can't be re-declared.
 
 ```javascript,editable
-console.log('Hello World')
+console.log('Hello World');
 ```
 
 ```javascript,editable

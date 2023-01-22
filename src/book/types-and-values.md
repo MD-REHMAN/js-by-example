@@ -4,7 +4,7 @@ JavaScript is Dynamically-typed language meaning the interpreter assigns variabl
 
 Thus, JavaScript provide special keyword called `typeof` to get the type of the value.
 
-```JavaScript
+```javascript,editable
 let foo;
 
 console.log(typeof foo)

@@ -6,6 +6,10 @@ window.onunload = function () {};
 // Global variable, shared between modules
 function playground_text(playground, hidden = true) {
   let code_block = playground.querySelector("code");
+  ace.edit(code_block, {
+    mode: "ace/mode/javascript",
+    selectionStyle: "text",
+  });
 
   if (window.ace && code_block.classList.contains("editable")) {
     let editor = window.ace.edit(code_block);
@@ -18,92 +22,7 @@ function playground_text(playground, hidden = true) {
 }
 
 (function codeSnippets() {
-  function fetch_with_timeout(url, options, timeout = 6000) {
-    return Promise.race([
-      fetch(url, options),
-      new Promise((_, reject) =>
-        setTimeout(() => reject(new Error("timeout")), timeout),
-      ),
-    ]);
-  }
-
-  var playgrounds = Array.from(document.querySelectorAll(".playground"));
-  if (playgrounds.length > 0) {
-    fetch_with_timeout("https://play.rust-lang.org/meta/crates", {
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-      mode: "cors",
-    })
-      .then((response) => response.json())
-      .then((response) => {
-        // get list of crates available in the rust playground
-        let playground_crates = response.crates.map((item) => item["id"]);
-        playgrounds.forEach((block) =>
-          handle_crate_list_update(block, playground_crates),
-        );
-      });
-  }
-
-  function handle_crate_list_update(playground_block, playground_crates) {
-    // update the play buttons after receiving the response
-    update_play_button(playground_block, playground_crates);
-
-    // and install on change listener to dynamically update ACE editors
-    if (window.ace) {
-      let code_block = playground_block.querySelector("code");
-      if (code_block.classList.contains("editable")) {
-        let editor = window.ace.edit(code_block);
-        editor.addEventListener("change", function (e) {
-          update_play_button(playground_block, playground_crates);
-        });
-        // add Ctrl-Enter command to execute rust code
-        editor.commands.addCommand({
-          name: "run",
-          bindKey: {
-            win: "Ctrl-Enter",
-            mac: "Ctrl-Enter",
-          },
-          exec: (_editor) => run_rust_code(playground_block),
-        });
-      }
-    }
-  }
-
-  // updates the visibility of play button based on `no_run` class and
-  // used crates vs ones available on http://play.rust-lang.org
-  function update_play_button(pre_block, playground_crates) {
-    var play_button = pre_block.querySelector(".play-button");
-
-    // skip if code is `no_run`
-    if (pre_block.querySelector("code").classList.contains("no_run")) {
-      play_button.classList.add("hidden");
-      return;
-    }
-
-    // get list of `extern crate`'s from snippet
-    var txt = playground_text(pre_block);
-    var re = /extern\s+crate\s+([a-zA-Z_0-9]+)\s*;/g;
-    var snippet_crates = [];
-    var item;
-    while ((item = re.exec(txt))) {
-      snippet_crates.push(item[1]);
-    }
-
-    // check if all used crates are available on play.rust-lang.org
-    var all_available = snippet_crates.every(function (elem) {
-      return playground_crates.indexOf(elem) > -1;
-    });
-
-    if (all_available) {
-      play_button.classList.remove("hidden");
-    } else {
-      play_button.classList.add("hidden");
-    }
-  }
-
-  function run_rust_code(code_block) {
+  function run_javascript_code(code_block) {
     var result_block = code_block.querySelector(".result");
     if (!result_block) {
       result_block = document.createElement("code");
@@ -133,29 +52,33 @@ function playground_text(playground, hidden = true) {
 
     result_block.innerText = "Running...";
 
-    fetch_with_timeout("https://play.rust-lang.org/evaluate.json", {
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-      mode: "cors",
-      body: JSON.stringify(params),
-    })
-      .then((response) => response.json())
-      .then((response) => {
-        if (response.result.trim() === "") {
-          result_block.innerText = "No output";
-          result_block.classList.add("result-no-output");
-        } else {
-          result_block.innerText = response.result;
-          result_block.classList.remove("result-no-output");
-        }
-      })
-      .catch(
-        (error) =>
-          (result_block.innerText =
-            "Playground Communication: " + error.message),
-      );
+    // NOTE: Actual Code Prasing logic
+    try {
+      (() => {
+        const actual_console_log = console.log;
+        let out = "";
+        // NOTE: Overriding the default console.log function
+        console.log = (...args) => {
+          args.map((arg) => {
+            // NOTE: JSON.stringify objects for readability.
+            if (typeof arg === "object") {
+              out = out + JSON.stringify(arg, null, 2);
+            } else {
+              out = out + arg;
+            }
+          });
+
+          out = out + "\n";
+          //  NOTE: Returning and also calling the actual_console_log. But it is not required.
+          return actual_console_log(...args);
+        };
+
+        eval(text);
+        result_block.innerText = out;
+      })();
+    } catch (error) {
+      result_block.innerText = error;
+    }
   }
 
   // Syntax highlighting Configuration
@@ -171,14 +94,14 @@ function playground_text(playground, hidden = true) {
     });
 
   if (window.ace) {
-    // language-rust class needs to be removed for editable
+    // language-javascript class needs to be removed for editable
     // blocks or highlightjs will capture events
     code_nodes
       .filter(function (node) {
         return node.classList.contains("editable");
       })
       .forEach(function (block) {
-        block.classList.remove("language-rust");
+        block.classList.remove("language-javascript");
       });
 
     code_nodes
@@ -200,47 +123,50 @@ function playground_text(playground, hidden = true) {
     block.classList.add("hljs");
   });
 
-  Array.from(document.querySelectorAll("code.language-rust")).forEach(function (
-    block,
-  ) {
-    var lines = Array.from(block.querySelectorAll(".boring"));
-    // If no lines were hidden, return
-    if (!lines.length) {
-      return;
-    }
-    block.classList.add("hide-boring");
-
-    var buttons = document.createElement("div");
-    buttons.className = "buttons";
-    buttons.innerHTML =
-      '<button class="fa fa-eye" title="Show hidden lines" aria-label="Show hidden lines"></button>';
-
-    // add expand button
-    var pre_block = block.parentNode;
-    pre_block.insertBefore(buttons, pre_block.firstChild);
-
-    pre_block.querySelector(".buttons").addEventListener("click", function (e) {
-      if (e.target.classList.contains("fa-eye")) {
-        e.target.classList.remove("fa-eye");
-        e.target.classList.add("fa-eye-slash");
-        e.target.title = "Hide lines";
-        e.target.setAttribute("aria-label", e.target.title);
-
-        block.classList.remove("hide-boring");
-      } else if (e.target.classList.contains("fa-eye-slash")) {
-        e.target.classList.remove("fa-eye-slash");
-        e.target.classList.add("fa-eye");
-        e.target.title = "Show hidden lines";
-        e.target.setAttribute("aria-label", e.target.title);
-
-        block.classList.add("hide-boring");
+  Array.from(document.querySelectorAll("code.language-javascript")).forEach(
+    function (block) {
+      var lines = Array.from(block.querySelectorAll(".boring"));
+      // If no lines were hidden, return
+      if (!lines.length) {
+        return;
       }
-    });
-  });
+      block.classList.add("hide-boring");
+
+      var buttons = document.createElement("div");
+      buttons.className = "buttons";
+      buttons.innerHTML =
+        '<button class="fa fa-eye" title="Show hidden lines" aria-label="Show hidden lines"></button>';
+
+      // add expand button
+      var pre_block = block.parentNode;
+      pre_block.insertBefore(buttons, pre_block.firstChild);
+
+      pre_block
+        .querySelector(".buttons")
+        .addEventListener("click", function (e) {
+          if (e.target.classList.contains("fa-eye")) {
+            e.target.classList.remove("fa-eye");
+            e.target.classList.add("fa-eye-slash");
+            e.target.title = "Hide lines";
+            e.target.setAttribute("aria-label", e.target.title);
+
+            block.classList.remove("hide-boring");
+          } else if (e.target.classList.contains("fa-eye-slash")) {
+            e.target.classList.remove("fa-eye-slash");
+            e.target.classList.add("fa-eye");
+            e.target.title = "Show hidden lines";
+            e.target.setAttribute("aria-label", e.target.title);
+
+            block.classList.add("hide-boring");
+          }
+        });
+    },
+  );
 
   if (window.playground_copyable) {
     Array.from(document.querySelectorAll("pre code")).forEach(function (block) {
       var pre_block = block.parentNode;
+      pre_block.classList.add("playground");
       if (!pre_block.classList.contains("playground")) {
         var buttons = pre_block.querySelector(".buttons");
         if (!buttons) {
@@ -280,7 +206,7 @@ function playground_text(playground, hidden = true) {
 
     buttons.insertBefore(runCodeButton, buttons.firstChild);
     runCodeButton.addEventListener("click", function (e) {
-      run_rust_code(pre_block);
+      run_javascript_code(pre_block);
     });
 
     if (window.playground_copyable) {
