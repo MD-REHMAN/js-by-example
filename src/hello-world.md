@@ -15,8 +15,8 @@ But beside this editor, where can I ran JavaScript code??
 
 I will tell you 3 places where you can run this code.
 
-- [Browser](/book/hello/browser.md)
+- [Browser](/hello/browser.md)
 
-- [Online tools](/book/hello/online-playground.md)
+- [Online tools](/hello/online-playground.md)
 
-- [Terminal](/book/hello/terminal.md)(recommended)
+- [Terminal](/hello/terminal.md)(recommended)
