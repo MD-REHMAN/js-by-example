@@ -4,6 +4,13 @@ An integral part of any programming language are ways to modify control flow: if
 
 ### Ternary
 
+**Syntax**
+</br>
+
+```javascript
+condition ? exprIfTrue : exprIfFalse;
+```
+
 ```javascript,editable
 const true_value = true ? "I am True" : "I am False";
 const false_value = false ? "I am True" : "I am False";

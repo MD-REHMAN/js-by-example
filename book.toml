@@ -15,7 +15,4 @@ line-numbers = true
 enable = true
 
 [output.html]
-git-repository-url = "https://github.com/rust-lang/rust-by-example"
-
-[rust]
-edition = "2021"
+git-repository-url = "https://github.com/MD-REHMAN/js-by-example"

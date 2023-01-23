@@ -6,10 +6,6 @@ window.onunload = function () {};
 // Global variable, shared between modules
 function playground_text(playground, hidden = true) {
   let code_block = playground.querySelector("code");
-  ace.edit(code_block, {
-    mode: "ace/mode/javascript",
-    selectionStyle: "text",
-  });
 
   if (window.ace && code_block.classList.contains("editable")) {
     let editor = window.ace.edit(code_block);
@@ -101,7 +97,7 @@ function playground_text(playground, hidden = true) {
         return node.classList.contains("editable");
       })
       .forEach(function (block) {
-        block.classList.remove("language-javascript");
+        // block.classList.remove("language-javascript");
       });
 
     code_nodes
@@ -125,6 +121,10 @@ function playground_text(playground, hidden = true) {
 
   Array.from(document.querySelectorAll("code.language-javascript")).forEach(
     function (block) {
+      // window.ace.edit(block, {
+      //   mode: "ace/mode/javascript",
+      //   selectionStyle: "text",
+      // });
       var lines = Array.from(block.querySelectorAll(".boring"));
       // If no lines were hidden, return
       if (!lines.length) {
@@ -163,10 +163,18 @@ function playground_text(playground, hidden = true) {
     },
   );
 
+  // NOTE: Adding playground class to code block parent
+  Array.from(document.querySelectorAll("code.editable")).forEach(function (
+    editable_code,
+  ) {
+    editable_code.parentNode.classList.add("playground");
+  });
+
   if (window.playground_copyable) {
     Array.from(document.querySelectorAll("pre code")).forEach(function (block) {
       var pre_block = block.parentNode;
-      pre_block.classList.add("playground");
+      // HACK: To make ever code block playable. By adding the `playground` class
+      // pre_block.classList.add("playground");
       if (!pre_block.classList.contains("playground")) {
         var buttons = pre_block.querySelector(".buttons");
         if (!buttons) {
@@ -186,6 +194,7 @@ function playground_text(playground, hidden = true) {
     });
   }
 
+  // NOTE: Adding the Play button in the Code Block.
   // Process playground code blocks
   Array.from(document.querySelectorAll(".playground")).forEach(function (
     pre_block,
@@ -291,7 +300,6 @@ function playground_text(playground, hidden = true) {
       stylesheets.ayuHighlight.disabled = true;
       stylesheets.tomorrowNight.disabled = false;
       stylesheets.highlight.disabled = true;
-
       ace_theme = "ace/theme/tomorrow_night";
     } else if (theme == "ayu") {
       stylesheets.ayuHighlight.disabled = false;
