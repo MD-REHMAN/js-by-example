@@ -1,2 +1,5 @@
-/book
+# Build of all books
+book
+
+# special folders which won;t be tracked by git
 ignore
