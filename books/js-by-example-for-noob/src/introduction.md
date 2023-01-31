@@ -1,4 +1,4 @@
-# JS by Example
+# JS by Example For Noob
 
 JavaScript (JS) is a dynamic, single-threaded, just-in-time compiled, prototype-based programming language.
 
