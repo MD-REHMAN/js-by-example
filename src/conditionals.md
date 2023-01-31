@@ -2,14 +2,7 @@
 
 An integral part of any programming language are ways to modify control flow: if/else, for, and others. Let's talk about them in JavaScript.
 
-### Ternary
-
-**Syntax**
-</br>
-
-```javascript
-condition ? exprIfTrue : exprIfFalse;
-```
+## Ternary
 
 ```javascript,editable
 const true_value = true ? "I am True" : "I am False";
@@ -20,7 +13,7 @@ console.log("false_value = ", false_value);
 
 ```
 
-### If/else
+## If / else
 
 Branching with if-else is similar to other languages.
 
@@ -47,7 +40,7 @@ if (duck === 'yellow') {
 }
 ```
 
-### Switch
+## Switch
 
 Switch statements are conditionals that may have many branches (like if / else if).
 

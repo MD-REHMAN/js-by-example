@@ -2,71 +2,40 @@
 
 Operators are the symbols between values that allow different operations like addition, subtraction, multiplication, and more. JavaScript has dozens of operators, so let’s focus on the ones you’re likely to see most often.
 
-### Assignment
+## Assignment
 
-The = operator assigns values. It’s used for setting the value of variables.
+Operators like `=`.
 
-### Arithmetic
-
-The + operator adds two numbers.
+We have already seen this operator in [variable]() section, and this operator assigns values.
 
 ```javascript,editable
-// EXAMPLE
-1 + 2;
-// OUTPUT
-3
+// Here we assigned the value `hello` to the variable named `message`.
+let message = "hello"
+console.log(message)
 ```
 
-The - operator subtracts one number from another.
+## [Arithmetic](/operators/arithmetic.md)
+
+Operators like `+`, `-`, `*` and `/`.
 
 ```javascript,editable
-// EXAMPLE
-50 - 15;
-// OUTPUT
-35
+// Simple example to show all Arithmetic operators
+let simple_math = 1/1*1-1+1;
+console.log(simple_math)
 ```
 
-The \* operator multiplies two numbers. Notice it’s an asterisk and not the × symbol commonly used in math.
+> **NOTE:**
+> Arithmetic operators follows the [BODMAS rule](https://www.google.com/search?q=what+is+BODMAS), thus the order in which you write them is ir-relevant.
+
+## [Logical Operators](/operators/logical.md)
+
+Operators like `==` , `===`, `!=` , `!==`, `>`, `<`, `>=`, and `<=`
 
 ```javascript,editable
-// EXAMPLE
-3 * 12;
-// OUTPUT
-36
+
 ```
 
-The / operator divides one number by another. Notice it’s a forward slash and not the ÷ symbol commonly used in math.
-
-```javascript,editable
-// EXAMPLE
-12 / 4;
-// OUTPUT
-3
-```
-
-JavaScript expressions follow an order of operations, so even though + is written first in the following example, the multiplication happens first between the last two numbers and \*.
-
-```javascript,editable
-// EXAMPLE
-1 + 100 * 5;
-// OUTPUT
-501
-```
-
-If want more control over the order, that’s where the grouping operator comes in handy.
-
-### Grouping
-
-() operator groups other values and operations. Code located between parentheses evaluates first as JavaScript solves each operation moving from left to right. Adding the grouping operator to the previous example causes 1 + 100 to evaluate first.
-
-```javascript,editable
-// EXAMPLE
-(1 + 100) * 5;
-// OUTPUT
-505
-```
-
-### Conditional Operators
+## [Conditional Operators](/operators/conditional.md)
 
 Operators like `||` , `!` and `&&`
 
@@ -74,10 +43,32 @@ Operators like `||` , `!` and `&&`
 
 ```
 
-### Bitwise Operators
+## [Bitwise Operators](/operators/bitwise.md)
 
 Operators like `|` , `!` and `&`
 
 ```javascript,editable
 
+```
+
+## The Nullish Coalescing Operator
+
+The ?? operator returns the first argument if it is not nullish (null or undefined).
+
+Otherwise it returns the second argument.
+
+```javascript,editable
+let name = null;
+let text = "missing";
+let result = name ?? text;
+```
+
+## The Optional Chaining Operator (?.)
+
+The ?. operator returns undefined if an object is undefined or null (instead of throwing an error).
+
+```javascript,editable
+const ninja = {name:"Naruto", chakra_nature:["wind"], clan:"Uzumaki", village: "Leaf"};
+console.log(ninja?.name)
+console.log(ninja?.weakness)
 ```

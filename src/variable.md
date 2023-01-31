@@ -1,68 +1,40 @@
 # Variable Declaration and Scope
 
-JavaScript provide 3 ways to declare variables namely `var`, `let` and `const`. And based on the the way you decalred it, it'll affect its scope and properties.
+JavaScript provide 3 ways to declare variables namely `var`, `let` and `const`. And based on the the way you declared it, it'll affect its scope and properties.
 
-### `var`
+## `var`
 
-The diffrentiating factor about the variables created using the `var` keyword is that they have lexical-scope.
+It is an ancient way for declaring variable, and before [ES6](), the only way. But it use to cause lot of confusion because of its lexical scoping.
 
-### `let`
+And that is how it different form `let` and `const`, because of its [scope]().
 
-Whereas the variable vreated using the `let` keyword have block scope.
-
-### `const`
-
-And `const` are very similar to `let` but a `const` can't be re-declared.
+A general thumb rule, use `let` over `var`.
 
 ```javascript,editable
-var global_var = 0;
-let global_let = 0;
-const global_const = 0;
+var message_with_var = "hello world";
+console.log(message_with_var);
+message_with_var = "new world";
+console.log(message_with_var);
+```
 
+## `let` & `const`
 
-// An IFEE, more on this later
-(() => {
-  var local_var = 1;
-  let local_let = 1;
-  const local_const = 1;
-  if(true) {
-    var block_var = 2;
-    let block_let = 2;
-    const block_const = 2;
+Both `let` & `const` were introduced with [ES6](), and introduced [block scoping]() in JavaScript. And they work very similar, except for the fact that variable declared using `const` cannot change its type.
 
-    // Every vaiables will be available here because of closure (more on that later) and scope.
-  }
+<!-- And `const` are very similar to `let` but a `const` can't be re-declared. -->
 
-  // Global variable will be available even here, because of the property called closure (more on that later).
-  console.log(global_var); // 0
-  console.log(global_let); // 0
-  console.log(global_const); // 0
+A general thumb rule, use `const` over `let` over `var`.
 
-  // Local variable will be availble in local scope.
-  console.log(local_var); // 1
-  console.log(local_let); // 1
-  console.log(local_const); // 1
+```javascript,editable
+// let
+let message_with_let = "hello world";
+console.log(message_with_let);
+message_with_let = "new world";
+console.log(message_with_let);
 
-  // Block let and const have block scope, thus they will throw error.
-  console.log(block_var); // 2
-  console.log(block_let); // error
-  console.log(block_const); // error
-})();
-
-
-// Global variables are available
-console.log(global_var); // 0
-console.log(global_let); // 0
-console.log(global_const); // 0
-
-// Local variable will not be availble outside the local scope.
-console.log(local_var); // error
-console.log(local_let); // error
-console.log(local_const); // error
-
-// Even the var will not be availble outside the lexical scope.
-console.log(block_var); // error
-console.log(block_let); // error
-console.log(block_const); // error
-
+// const
+const message_with_const = "hello world";
+console.log(message_with_const);
+// message_with_const = "new world";  <-- uncomment and you'll start seeing error.
+console.log(message_with_const);
 ```

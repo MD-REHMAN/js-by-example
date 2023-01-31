@@ -2,8 +2,20 @@
 
 An integral part of any programming language are ways to modify control flow: if/else, for, and others. Let's talk about them in JavaScript.
 
-### For
+## For
 
-### While
+```javascript,editable
 
-### Do while
+```
+
+## While
+
+```javascript,editable
+
+```
+
+## Do while
+
+```javascript,editable
+
+```
