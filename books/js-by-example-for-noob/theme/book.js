@@ -173,7 +173,7 @@ function playground_text(playground, hidden = true) {
   if (window.playground_copyable) {
     Array.from(document.querySelectorAll("pre code")).forEach(function (block) {
       var pre_block = block.parentNode;
-      // HACK: To make ever code block playable. By adding the `playground` class
+      // HACK: To make ever code block playable. By adding the `playground` class. But now not required.
       // pre_block.classList.add("playground");
       if (!pre_block.classList.contains("playground")) {
         var buttons = pre_block.querySelector(".buttons");
@@ -215,6 +215,7 @@ function playground_text(playground, hidden = true) {
 
     buttons.insertBefore(runCodeButton, buttons.firstChild);
     runCodeButton.addEventListener("click", function (e) {
+      // NOTE: Running the JavaScript code.
       run_javascript_code(pre_block);
     });
 

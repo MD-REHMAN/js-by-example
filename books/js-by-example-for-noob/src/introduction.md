@@ -1,29 +1,19 @@
 # JS by Example For Noob
 
-JavaScript (JS) is a dynamic, single-threaded, just-in-time compiled, prototype-based programming language.
-
-JavaScript by Example (JSBE) is a collection of runnable examples that illustrate various JavaScript concepts.
+Congratulation!! You have made the right choice for starting with the JavaScript.
 
 Now let's begin!
 
 - [Hello World](/hello-world.md)- Learn how and where to run JS.
 
-- [Type and Value]() - Learn about string, number, boolean, array and object.
+- [Types & Values](/types-and-values.md) - Learn about string, number, boolean, array and object.
 
-- [Variable]() - Declaration and scope.
+- [Variable](/variable.md) - Declaration and scope.
 
-- [Operators]()
+- [Operators](/operators.md)
 
-- [Flow of Control]() - if/else, for, and others.
+- [Flow of Control](/flow-of-control.md) - if/else, switch, for, while, and others.
 
-- [Functions]()
+- [Function](/function.md)
 
-- [Aysnc]() - Callback, Promise and more.
-
-- [Hoisting]()
-
-- [Closure]()
-
-- [Prototypes]()
-
-- [this]() - Learn about the infamous this keyword.
+- [Asynchronous](/asynchronous.md) - Callback, Promise and more.

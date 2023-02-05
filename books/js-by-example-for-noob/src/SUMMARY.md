@@ -2,17 +2,24 @@
 
 [Introduction](introduction.md)
 
-<!--
 - [Hello World](hello-world.md)
   - [Browser](hello/browser.md)
   - [Online tools](hello/online-playground.md)
   - [Terminal](hello/terminal.md)
 - [Types and Values](types-and-values.md)
+  <!--
+  - [Primitives](types/primitives.md)
   - [Object](types/object.md)
   - [Array](types/array.md)
+  -->
 - [Variable](variable.md)
-  - [Lexical Scope vs Block Scope](variable/scope.md)
 - [Operators](operators.md)
+- [Flow of Control](flow-of-control.md)
+
+[refrence](refrence.md)
+
+<!--
+  - [Lexical Scope vs Block Scope](variable/scope.md)
   - [Arithmetic](operators/arithmetic.md)
   - [Conditional](operators/conditional.md)
   - [Bitwise](operators/bitwise.md)
@@ -44,4 +51,4 @@
   - [Call, Apply and Bind]()
 - [Event Loop](event-loop.md)
 
-[refrence](refrence.md) -->
+-->
