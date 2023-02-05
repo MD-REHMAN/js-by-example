@@ -1,18 +1,5 @@
 # Conditionals
 
-An integral part of any programming language are ways to modify control flow: if/else, for, and others. Let's talk about them in JavaScript.
-
-## Ternary
-
-```javascript,editable
-const true_value = true ? "I am True" : "I am False";
-const false_value = false ? "I am True" : "I am False";
-
-console.log("true_value = ", true_value);
-console.log("false_value = ", false_value);
-
-```
-
 ## If / else
 
 Branching with if-else is similar to other languages.
@@ -40,9 +27,23 @@ if (duck === 'yellow') {
 }
 ```
 
+### Ternary
+
+These are short hand notation for if/else.
+
+```javascript,editable
+const true_value = true ? "I am True" : "I am False";
+const false_value = false ? "I am True" : "I am False";
+
+console.log("true_value = ", true_value);
+console.log("false_value = ", false_value);
+
+```
+
 ## Switch
 
 Switch statements are conditionals that may have many branches (like if / else if).
+Switch statements are more performant bu less flexible.
 
 ```javascript,editable
 // a simple switch statment

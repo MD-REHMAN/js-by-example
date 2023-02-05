@@ -1,3 +1,5 @@
+# Primitives
+
 # Types and Values
 
 JavaScript is Dynamically-typed language meaning the interpreter assigns variables a type at runtime based on the variable's value at the time.
@@ -42,6 +44,9 @@ console.log(typeof "")
 console.log(typeof " ")
 // string
 
+console.log(typeof new Date())
+// string
+
 ```
 
 ## Numbers
@@ -50,6 +55,8 @@ Numbers are values that can be used in mathematical operations. You don’t need
 
 ```javascript,editable
 console.log(7)
+// number
+console.log(3.14159265359)
 // number
 
 // But what's the limit, well you can check like this
@@ -102,7 +109,10 @@ console.log(typeof [1,2,3,4,5])
 
 console.log(typeof ["Naruto", "Sasuke", "Kakashi"])
 // object
+
+console.log(typeof ["Naruto", 1, true, {}, null, undefined])
+// object
 ```
 
 > NOTE:
-> You can also read about [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map), [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) and [Symbol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol).
+> You can also read about [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map), [Set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set), [BigInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#bigint_type) and [Symbol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol).

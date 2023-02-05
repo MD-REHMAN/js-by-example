@@ -11,6 +11,7 @@ And that is how it different form `let` and `const`, because of its [scope]().
 A general thumb rule, use `let` over `var`.
 
 ```javascript,editable
+console.log(message_with_var);
 var message_with_var = "hello world";
 console.log(message_with_var);
 message_with_var = "new world";
@@ -21,20 +22,24 @@ console.log(message_with_var);
 
 Both `let` & `const` were introduced with [ES6](), and introduced [block scoping]() in JavaScript. And they work very similar, except for the fact that variable declared using `const` cannot change its type.
 
-<!-- And `const` are very similar to `let` but a `const` can't be re-declared. -->
-
-A general thumb rule, use `const` over `let` over `var`.
+### let
 
 ```javascript,editable
-// let
+// console.log(message_with_let);  <-- uncomment and you'll start seeing error.
 let message_with_let = "hello world";
 console.log(message_with_let);
 message_with_let = "new world";
 console.log(message_with_let);
+```
 
-// const
+### const
+
+```javascript,editable
+// console.log(message_with_const);  <-- uncomment and you'll start seeing error.
 const message_with_const = "hello world";
 console.log(message_with_const);
 // message_with_const = "new world";  <-- uncomment and you'll start seeing error.
 console.log(message_with_const);
 ```
+
+> A general thumb rule, use `const` over `let` over `var`.
