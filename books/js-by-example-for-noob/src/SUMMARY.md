@@ -3,52 +3,21 @@
 [Introduction](introduction.md)
 
 - [Hello World](hello-world.md)
+
   - [Browser](hello/browser.md)
   - [Online tools](hello/online-playground.md)
   - [Terminal](hello/terminal.md)
+
 - [Types and Values](types-and-values.md)
-  <!--
-  - [Primitives](types/primitives.md)
-  - [Object](types/object.md)
-  - [Array](types/array.md)
-  -->
+
 - [Variable](variable.md)
+
 - [Operators](operators.md)
+
 - [Flow of Control](flow-of-control.md)
 
-[refrence](refrence.md)
+  - [Conditionals](flow-of-control/conditional.md)
+  - [Iterative](flow-of-control/iterative.md)
 
-<!--
-  - [Lexical Scope vs Block Scope](variable/scope.md)
-  - [Arithmetic](operators/arithmetic.md)
-  - [Conditional](operators/conditional.md)
-  - [Bitwise](operators/bitwise.md)
-- [Conditionals](conditionals.md)
-  - [Ternary]()
-  - [If / Else]()
-  - [Switch]()
-- [Loops](loops.md)
-  - [For]()
-  - [While]()
-  - [Do while]()
-- [Functions](functions.md)
-  - [Arrow function]()
-  - [IIFE]()
-  - [Contructor function]()
-- [Aysnc](aysnc.md)
-  - [Callback]()
-  - [Promise]()
-    - [Async / Await]()
-  - [Generator Functions]()
-
-# Concepts
-
-- [Hoisting](hoisting.md)
-- [Closure](closure.md)
-- [Prototypes](prototypes.md)
-  - [Inheritance]()
-- [this](this.md)
-  - [Call, Apply and Bind]()
-- [Event Loop](event-loop.md)
-
--->
+<!-- [exercise](exercise.md)
+[reference](reference.md) -->
