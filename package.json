@@ -1,0 +1,20 @@
+{
+  "name": "js-by-example",
+  "version": "1.0.0",
+  "description": "JavaScript by Example (JSBE) is a collection of runnable examples that illustrate various JavaScript concepts.",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd js-by-example && mdbook serve --open",
+    "build": "cd js-by-example && mdbook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MD-REHMAN/js-by-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MD-REHMAN/js-by-example/issues"
+  },
+  "homepage": "https://github.com/MD-REHMAN/js-by-example#readme"
+}
