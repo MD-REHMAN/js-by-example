@@ -16,4 +16,4 @@ Now let's begin!
 
 - [Function](/function.md)
 
-- [Asynchronous](/asynchronous.md) - Callback, Promise and more.
+<!-- - [Asynchronous](/asynchronous.md) - Callback, Promise and more. -->

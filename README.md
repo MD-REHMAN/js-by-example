@@ -1,6 +1,6 @@
-# JS by Example
+# [JS by Example](https://js-by-example.md-rehman.dev/)
 
-JavaScript by Example (JSBE) is a collection of runnable examples that illustrate various JavaScript concepts.
+[JavaScript by Example (JSBE)](https://js-by-example.md-rehman.dev/) is a collection of runnable examples that illustrate various JavaScript concepts.
 
 ## This Book is for
 
@@ -18,4 +18,9 @@ JavaScript by Example (JSBE) is a collection of runnable examples that illustrat
 ## What it isn't?
 
 - Not a setup guide.
-- It doesn't promise to make you an expert in JS, but a beginner to strong fundamentals.
+- It doesn't promise to make you an expert in JS, but a beginner with strong fundamentals.
+
+### Contribution
+
+- _For now, I am not accepting any PRs._
+- But Feel free to raise issues, for any issues or feature requests.

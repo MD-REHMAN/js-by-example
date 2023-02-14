@@ -44,8 +44,8 @@ To run JavaScript, you need [JavaScript Engine](https://en.wikipedia.org/wiki/Ja
 
 I will tell you 3 places where you can run this code.
 
-- [Browser](/where-to-run/browser.md)
+- [Browser](/js-by-example-for-noob/where-to-run/browser.md)
 
-- [Online tools](/where-to-run/online-playground.md)
+- [Online tools](/js-by-example-for-noob/where-to-run/online-playground.md)
 
-- [Terminal](/where-to-run/terminal.md)(recommended)
+- [Terminal](/js-by-example-for-noob/where-to-run/terminal.md)(recommended)
