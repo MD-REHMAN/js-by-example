@@ -26,4 +26,4 @@ node hello
 Voila! You have created your very first node based hello world program.
 
 > NOTE:
-> Read about [nodemon](https://www.npmjs.com/package/nodemon). If you want run the program everytime you do a change.
+> Read about [nodemon](https://www.npmjs.com/package/nodemon). If you want run the program anytime you do a change.

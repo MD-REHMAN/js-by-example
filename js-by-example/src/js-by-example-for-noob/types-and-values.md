@@ -96,9 +96,13 @@ While `null` indicates the absence of an object
 
 ## [Objects]()
 
+Objects are variables that contain multiple data values. The values within a JS object are known as properties. Objects use keys to name values, much like how is done with variables.
+
 Objects are nothing but collection of values.
 
-Objects are variables that contain multiple data values. The values within a JS object are known as properties. Objects use keys to name values, much like how is done with variables.
+Discuss it later.
+
+<!-- Objects are **Reference values**. -->
 
 ```javascript,editable
 // Well Arrays are also objects
@@ -117,6 +121,8 @@ Array are special type of object. That hold other values in order.
 The values inside an array are called elements.
 
 Array elements don’t all have to be the same type of value. Elements can be any kind of JavaScript value — even other arrays or objects.
+
+<!-- Array are **Reference values**. -->
 
 ```javascript,editable
 console.log(typeof [1,2,3,4,5])
