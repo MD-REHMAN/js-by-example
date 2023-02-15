@@ -15,5 +15,6 @@ Now let's begin!
 - [Flow of Control](/flow-of-control.md) - if/else, switch, for, while, and others.
 
 - [Function](/function.md)
+- [Exercise](/exercise.md) - Check out different syntax
 
 <!-- - [Asynchronous](/asynchronous.md) - Callback, Promise and more. -->

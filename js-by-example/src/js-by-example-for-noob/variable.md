@@ -4,7 +4,7 @@ JavaScript provide 3 ways to declare variables namely `var`, `let` and `const`. 
 
 ## `var`
 
-It is an ancient way for declaring variable, and before [ES6](), the only way. But it use to cause lot of confusion because of its lexical scoping.
+It is an ancient way for declaring variable, and before [ES6](), the only way. But it use to cause lot of confusion because of its functional scope (lexical scoping).
 
 And that is how it different form `let` and `const`, because of its [scope]().
 

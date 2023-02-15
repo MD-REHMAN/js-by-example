@@ -26,11 +26,15 @@
   - [Function](js-by-example-for-noob/function.md)
 
   - [Exercise](js-by-example-for-noob/exercise.md)
-    - [Learning syntax](js-by-example-for-noob/exercise/leaning-syntax.md)
+    - [Learning syntax](js-by-example-for-noob/exercise/learning-syntax.md)
     - [Guess the output](js-by-example-for-noob/exercise/guess-the-output.md)
     - [Fix the code](js-by-example-for-noob/exercise/fix-the-code.md)
     - [Odd one out](js-by-example-for-noob/exercise/odd-one-out.md)
 
-- [JS By Example For Coder](js-by-example-for-coder/introduction.md)
+<!-- - [JS By Example For Coder](js-by-example-for-coder/introduction.md) -->
 
-- [JS By Example For WebDev](js-by-example-for-webdev/introduction.md)
+- [JS By Example For Coder]()
+
+<!-- - [JS By Example For WebDev](js-by-example-for-webdev/introduction.md) -->
+
+- [JS By Example For WebDev]()
