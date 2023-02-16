@@ -25,15 +25,15 @@
 
   - [Function](js-by-example-for-noob/function.md)
 
-  <!-- - [Exercise](js-by-example-for-noob/exercise.md)
-    - [Guess the output](js-by-example-for-noob/exercise/guess-the-output.md)
-    - [Fix the code](js-by-example-for-noob/exercise/fix-the-code.md)
-    - [Odd one out](js-by-example-for-noob/exercise/odd-one-out.md) -->
-
   - [Exercise]()
     - [Guess the output]()
     - [Fix the code]()
     - [Odd one out]()
+
+  <!-- - [Exercise](js-by-example-for-noob/exercise.md)
+    - [Guess the output](js-by-example-for-noob/exercise/guess-the-output.md)
+    - [Fix the code](js-by-example-for-noob/exercise/fix-the-code.md)
+    - [Odd one out](js-by-example-for-noob/exercise/odd-one-out.md) -->
 
 <!-- - [JS By Example For Coder](js-by-example-for-coder/introduction.md) -->
 
