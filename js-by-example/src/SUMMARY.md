@@ -18,6 +18,8 @@
 
   - [Operators](js-by-example-for-noob/operators.md)
 
+    - [Conditional](js-by-example-for-noob/operators/conditional.md)
+
   - [Flow of Control](js-by-example-for-noob/flow-of-control.md)
 
     - [Conditionals](js-by-example-for-noob/flow-of-control/conditional.md)
@@ -35,10 +37,41 @@
     - [Fix the code](js-by-example-for-noob/exercise/fix-the-code.md)
     - [Odd one out](js-by-example-for-noob/exercise/odd-one-out.md) -->
 
-<!-- - [JS By Example For Coder](js-by-example-for-coder/introduction.md) -->
+- [JS By Example For Coder](js-by-example-for-coder/introduction.md)
 
-- [JS By Example For Coder]()
+  - [Types and Values]()
 
-<!-- - [JS By Example For WebDev](js-by-example-for-webdev/introduction.md) -->
+    - [Primitive vs Reference]()
+    - [Objects]()
+      - [Prototype]()
+      - [Prototypal Inheritance]()
+    - [Array]()
 
-- [JS By Example For WebDev]()
+  - [Variables]()
+
+    - [Blocks Scope vs Function Scope]()
+    - [Hoisting]()
+
+  - [Functions]()
+
+    - [Arrow functions]()
+    - [Constructor functions]()
+    - [IIFE]()
+    - [this keyword]()
+      - [call, apply & bind]()
+
+  - [Class]()
+
+    - [Under the hood]()
+    - [this keyword again]()
+
+  - [Asynchronous JavaScript]()
+    - [Callback]()
+    - [Promise]()
+    - [Async & Await]()
+
+- [JS By Example For WebDev](js-by-example-for-webdev/introduction.md)
+
+  - [window]()
+    - [Blocks Scope vs Function Scope]()
+    - [Hoisting]()
