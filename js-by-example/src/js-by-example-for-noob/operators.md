@@ -16,7 +16,7 @@ console.log(message)
 
 There are also different types of assignments operators like `&&=`, `||=`, `+=`, `-=`, `*=`, `/=`, `%=`, `??=` and more. But we learn about them later.
 
-## [Arithmetic](/operators/arithmetic.md)
+## [Arithmetic]()
 
 Operators like `+`, `-`, `*`, `/` and `%`.
 
@@ -41,6 +41,7 @@ console.log(5-4+3*1/2)
 
 Arithmetic operators follows the [BODMAS rule](https://www.google.com/search?q=what+is+BODMAS), thus the order in which you write them is ir-relevant. You can use small brackets `()` to priorities certain operation.
 
+<!-- This will be moved to advanced topic -->
 ### Increment & Decrement
 
 ```javascript,editable
@@ -60,11 +61,22 @@ console.log("Final count value: ", count);
 
 Increment & Decrement operator can also be used after the operand (like `count++`). The difference it will return the value before it is incremented.
 
-## [Logical Operators](/operators/logical.md)
+## Bitwise Operators
 
-Operators like `!`, `==` , `===`, `!=` , `!==`, `>`, `<`, `>=`, and `<=`
+Operators like `^`, `~`, `<<`, `>>`, `>>>`, `|` and `&`
+
+These are not as commonly used, so we'll look at them later.
+
+## [Comparison & Logical Operators](/js-by-example-for-noob/operators/comparison-and-logical.md)
+
+These are the coolest and one of the most frequently used one (unlike Bit-wise operators) as well. So we will dive deep and understand each of them one-by-one.
+
+Let see how they look.
+Operators like `==` , `===`, `!=` , `!==`, `>`, `<`, `>=`, `<=`,`!`, `||` and `&&`.
 
 ```javascript,editable
+
+// Comparison Operators 
 const random = Math.random().toFixed(1);
 
 console.log('\n"10" == 10 = ', "10" == 10);
@@ -77,13 +89,8 @@ console.log('\nrandom > 0.5 = ', random > 0.5);
 console.log('random >= 0.5 = ', random >= 0.5);
 console.log('random < 0.5 = ', random < 0.5);
 console.log('random >= 0.5 = ', random >= 0.5);
-```
 
-## [Conditional Operators](/operators/conditional.md)
-
-Operators like `!`, `||` and `&&`
-
-```javascript,editable
+// Logical Operators
 console.log('!true = ', !true);
 console.log('!false = ', !false);
 
@@ -98,11 +105,7 @@ console.log('false && true = ', false && true);
 console.log('false && false = ', false && false);
 ```
 
-## [Bitwise Operators](/operators/bitwise.md)
-
-Operators like `^`, `~`, `<<`, `>>`, `>>>`, `|` and `&`
-
-These are not as commonly used, so we'll look at them later.
+Don't they look complicated. Let's look at them one by one.
 
 <!-- [I will move it to advance topic, And give it a better name] -->
 
@@ -134,7 +137,3 @@ const sasuke = null;
 console.log(naruto?.clan)
 console.log(sasuke?.clan)  // <-- Try removing the `?`
 ```
-
-## Source
-
-- [JavaTPoint](https://www.javatpoint.com/javascript-operators)

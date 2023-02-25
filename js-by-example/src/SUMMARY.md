@@ -18,7 +18,7 @@
 
   - [Operators](js-by-example-for-noob/operators.md)
 
-    - [Conditional](js-by-example-for-noob/operators/conditional.md)
+    - [Comparison & Logical](js-by-example-for-noob/operators/comparison-and-logical.md)
 
   - [Flow of Control](js-by-example-for-noob/flow-of-control.md)
 

@@ -88,23 +88,17 @@ console.log(typeof false)
 
 ```
 
-### Undefined & Null
-
-`undefined` is default value for every variable till, it is defined. And `undefined` indicates the absence of a value.
-
-While `null` indicates the absence of an object
-
 ## [Objects]()
 
 Objects are variables that contain multiple data values. The values within a JS object are known as properties. Objects use keys to name values, much like how is done with variables.
 
-Objects are nothing but collection of values.
-
-Discuss it later.
-
-<!-- Objects are **Reference values**. -->
+Objects are first **Reference value/type** we have encountered so far. Just keep that in mind we'll discuss it later.
 
 ```javascript,editable
+
+// Objects are defined using `{}`, and between those parenthesis lies key-value pairs.
+console.log(typeof {key1: "value1", key2: "value2"})
+
 // Well Arrays are also objects
 console.log(typeof [])
 // object
@@ -113,6 +107,12 @@ console.log(typeof [])
 console.log(typeof null)
 // object
 ```
+
+### Undefined & Null
+
+`undefined` is default value for every variable till, it is defined. And `undefined` indicates the absence of a value.
+
+While `null` indicates the absence of an object
 
 ## [Array]()
 
@@ -125,6 +125,7 @@ Array elements don’t all have to be the same type of value. Elements can be an
 <!-- Array are **Reference values**. -->
 
 ```javascript,editable
+// Arrays are defined using `[]`, and between those brackets lies values.
 console.log(typeof [1,2,3,4,5])
 // object
 
