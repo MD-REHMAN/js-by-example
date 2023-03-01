@@ -145,23 +145,34 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="logical"><a class="header" href="#logical">Logical</a></h1>
-<h2 id="not-"><a class="header" href="#not-">NOT (<code>!</code>)</a></h2>
+<p>Now we know the NOT (<code>!</code>) Operator and all the <a href="">Comparison Operators</a>. These two operators are just logical (pun intended).</p>
 <h2 id="or-"><a class="header" href="#or-">OR (<code>||</code>)</a></h2>
-<p>The <strong>NOT</strong>(<code>!</code>) is operating on only 1 operand, but the <strong>OR</strong>(<code>||</code>) needs 2 operand. That means there 4 possible scenarios. Both of them are <code>true</code>, either 1 one them is <code>true</code> and none of them are <code>true</code>.</p>
+<!-- The **NOT**(`!`) is operating on only 1 operand, but the **OR**(`||`) needs 2 operand. That means there 4 possible scenarios. Both of them are `true`, either 1 one them is `true` and none of them are `true`. -->
+<pre><code class="language-javascript editable">const num = 7;
+console.log(num &lt; 5 || num &gt; 10);
+</code></pre>
+<p>So, if either of them is <code>true</code>, the output is <code>true</code>. And it's only <code>false</code> when both <em>(all)</em> of them are <code>false</code>.</p>
 <pre><code class="language-javascript editable">console.log('true || true = ', true || true);
 console.log('true || false = ', true || false);
 console.log('false || true = ', false || true);
 console.log('false || false = ', false || false);
 </code></pre>
-<p>So, if either of them is <code>true</code>, the output is <code>true</code>. And it's only <code>false</code> when both <em>(all)</em> of them are <code>false</code></p>
+<p>This is called truth table. Which shows how the OR operator with respond all 4 possible case.</p>
 <h2 id="and-"><a class="header" href="#and-">AND (<code>&amp;&amp;</code>)</a></h2>
-<p>Now, this is very similar to <strong>OR</strong>(<code>||</code>). Let's all the 4 possible scenarios for this as well.</p>
+<p>Now, this is very similar to <strong>OR</strong>(<code>||</code>).</p>
+<pre><code class="language-javascript editable">const num = 7;
+console.log(num &gt; 5 &amp;&amp; num &lt; 10 &amp;&amp; num &lt; 15);
+</code></pre>
+<p>So, it returns <code>true</code> only when both <em>(all)</em> of them are <code>true</code>.</p>
+<blockquote>
+<p>Don't forget to play with example. What will happen if you replace <code>7</code> with <code>11</code>.</p>
+</blockquote>
+<p>Let's all the 4 possible scenarios for this as well. Assuming we have 2 operands.</p>
 <pre><code class="language-javascript editable">console.log('true &amp;&amp; true = ', true &amp;&amp; true);
 console.log('true &amp;&amp; false = ', true &amp;&amp; false);
 console.log('false &amp;&amp; true = ', false &amp;&amp; true);
 console.log('false &amp;&amp; false = ', false &amp;&amp; false);
 </code></pre>
-<p>So, it returns <code>true</code> only when both <em>(all)</em> of them are <code>true</code>.</p>
 
                     </main>
 

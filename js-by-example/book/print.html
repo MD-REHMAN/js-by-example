@@ -558,7 +558,7 @@ There was specific reason why I overloaded you with that much information in the
 console.log('!false = ', !false);
 </code></pre>
 <p>Did you get it?
-If not, try reading it out <strong>!true</strong> =&gt; <strong>NOTtrue</strong>. Meaning if it is not <code>true</code>, then it much be <code>false</code>.
+If not, try reading it out <strong>!true</strong> =&gt; <strong>NOTtrue</strong>. Meaning if it is not <code>true</code>, then it must be <code>false</code>. Therefore,
 If you put <code>!</code> before <code>true</code>, it makes it <code>false</code> and vice-versa.
 But that's for boolean, how about numbers?
 Try guessing the output before running the example.</p>
@@ -571,81 +571,69 @@ This is happening because in javascript every value is either <a href="https://d
 <p>Remember all the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy">Falsy</a> values, all the other value should be <a href="https://developer.mozilla.org/en-US/docs/Glossary/Truthy">Truthy</a>.</p>
 </blockquote>
 <p>Before proceeding with the rest of <a href="js-by-example-for-noob/operators/">Logical</a> operators, we'll understand the <a href="js-by-example-for-noob/operators/">Comparison</a> operators.</p>
-<h3 id="or-"><a class="header" href="#or-">OR (<code>||</code>)</a></h3>
-<p>The <strong>NOT</strong>(<code>!</code>) is operating on only 1 operand, but the <strong>OR</strong>(<code>||</code>) needs 2 operand. That means there 4 possible scenarios. Both of them are <code>true</code>, either 1 one them is <code>true</code> and none of them are <code>true</code>.</p>
-<pre><code class="language-javascript editable">console.log('true || true = ', true || true);
-console.log('true || false = ', true || false);
-console.log('false || true = ', false || true);
-console.log('false || false = ', false || false);
-</code></pre>
-<p>So, if either of them is <code>true</code>, the output is <code>true</code>. And it's only <code>false</code> when both <em>(all)</em> of them are <code>false</code></p>
-<h3 id="and-"><a class="header" href="#and-">AND (<code>&amp;&amp;</code>)</a></h3>
-<p>Now, this is very similar to <strong>OR</strong>(<code>||</code>). Let's all the 4 possible scenarios for this as well.</p>
-<pre><code class="language-javascript editable">console.log('true &amp;&amp; true = ', true &amp;&amp; true);
-console.log('true &amp;&amp; false = ', true &amp;&amp; false);
-console.log('false &amp;&amp; true = ', false &amp;&amp; true);
-console.log('false &amp;&amp; false = ', false &amp;&amp; false);
-</code></pre>
-<p>So, it returns <code>true</code> only when both <em>(all)</em> of them are <code>true</code>.</p>
-<h2 id="comparison"><a class="header" href="#comparison">Comparison</a></h2>
-<h3 id="equal-to---"><a class="header" href="#equal-to---">Equal to (<code>==</code> &amp; <code>===</code>)</a></h3>
-<pre><code class="language-javascript editable">console.log('&quot;10&quot; == 10 = ', &quot;10&quot; == 10);
-console.log('&quot;10&quot; === 10 = ', &quot;10&quot; === 10);
-</code></pre>
-<h3 id="not-equal-to---"><a class="header" href="#not-equal-to---">Not Equal to (<code>!=</code> &amp; <code>!==</code>)</a></h3>
-<pre><code class="language-javascript editable">
-// Comparison Operators
-console.log('&quot;10&quot; != 10 = ', &quot;10&quot; != 10);
-console.log('&quot;10&quot; !== 10 = ', &quot;10&quot; !== 10);
-</code></pre>
-<h3 id="less-than-and-less-than-equal-to---"><a class="header" href="#less-than-and-less-than-equal-to---">Less than and Less than equal to (<code>&lt;</code> &amp; <code>&lt;=</code>)</a></h3>
-<pre><code class="language-javascript editable">// Comparison Operators
-console.log('random &lt; 0.5 = ', random &lt; 0.5);
-console.log('random &gt;= 0.5 = ', random &gt;= 0.5);
-</code></pre>
-<h3 id="greater-than-and-greater-than-equal-to--"><a class="header" href="#greater-than-and-greater-than-equal-to--">Greater than and Greater than equal to<code>&gt;</code> &amp; <code>&gt;=</code></a></h3>
-<pre><code class="language-javascript editable">console.log('random &gt; 0.5 = ', random &gt; 0.5);
-console.log('random &gt;= 0.5 = ', random &gt;= 0.5);
-</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="comparison-operators"><a class="header" href="#comparison-operators">Comparison Operators</a></h1>
-<p>You guessed it, they're used to compare 2 operands. Let's look at how they work in JavaScript.</p>
-<h2 id="equal-to----1"><a class="header" href="#equal-to----1">Equal to (<code>==</code> &amp; <code>===</code>)</a></h2>
+<p>They're used to compare 2 operands. Let's look at how they work in JavaScript.</p>
+<h2 id="inequality---"><a class="header" href="#inequality---">Inequality (<code>!=</code> &amp; <code>!==</code>)</a></h2>
+<p>We have seen the <strong>NOT(!)</strong> operator just now. So, based on that <code>!=</code> means NOT-Equal.
+But why the second operator have 2 equal sign?
+Let's run the code and understand the difference.</p>
+<pre><code class="language-javascript editable">console.log('&quot;10&quot; != 10 = ', &quot;10&quot; != 10);
+console.log('&quot;10&quot; !== 10 = ', &quot;10&quot; !== 10);
+</code></pre>
+<p>Lets break down what's happening. So in both the cases, we are comparing <code>&quot;10&quot;</code> which is a <em>string</em> with <code>10</code> which is a <em>number</em>.</p>
+<p>In the first case, JavaScript converts the <em>number</em> to <em>string</em>. And thus we get <code>false</code>. If you want to know why number got converted to string and not the other way around, then check <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Equality">MDN Docs</a>.</p>
+<p>But in the second case, since they are not of the same type, we get <code>true</code> meaning they are not equal.</p>
+<blockquote>
+<p>A general thumb rule, use <code>!==</code>(strict equality) over <code>!=</code>(equality).</p>
+</blockquote>
+<p>With this out of the way, the rest of the example will be self explanatory. Don't forget to try different value in the example.</p>
+<h2 id="equality---"><a class="header" href="#equality---">Equality (<code>==</code> &amp; <code>===</code>)</a></h2>
+<p>Now, this operator is obvious.</p>
+<blockquote>
+<p>NOTE:
+The single (<code>=</code>) sign is used for <a href="js-by-example-for-noob/operators/">Assignment Operator</a>.</p>
+</blockquote>
 <pre><code class="language-javascript editable">console.log('&quot;10&quot; == 10 = ', &quot;10&quot; == 10);
 console.log('&quot;10&quot; === 10 = ', &quot;10&quot; === 10);
 </code></pre>
-<h2 id="not-equal-to----1"><a class="header" href="#not-equal-to----1">Not Equal to (<code>!=</code> &amp; <code>!==</code>)</a></h2>
-<pre><code class="language-javascript editable">
-// Comparison Operators
-console.log('&quot;10&quot; != 10 = ', &quot;10&quot; != 10);
-console.log('&quot;10&quot; !== 10 = ', &quot;10&quot; !== 10);
-</code></pre>
-<h2 id="less-than-and-less-than-equal-to----1"><a class="header" href="#less-than-and-less-than-equal-to----1">Less than and Less than equal to (<code>&lt;</code> &amp; <code>&lt;=</code>)</a></h2>
+<h2 id="less-than-and-less-than-or-equal---"><a class="header" href="#less-than-and-less-than-or-equal---">Less than and Less than or equal (<code>&lt;</code> &amp; <code>&lt;=</code>)</a></h2>
 <pre><code class="language-javascript editable">// Comparison Operators
-console.log('random &lt; 0.5 = ', random &lt; 0.5);
-console.log('random &gt;= 0.5 = ', random &gt;= 0.5);
+console.log('5 &lt; 5 = ', 5 &lt; 5);
+console.log('5 &gt;= 5 = ', 5 &lt;= 5);
 </code></pre>
-<h2 id="greater-than-and-greater-than-equal-to---1"><a class="header" href="#greater-than-and-greater-than-equal-to---1">Greater than and Greater than equal to<code>&gt;</code> &amp; <code>&gt;=</code></a></h2>
-<pre><code class="language-javascript editable">console.log('random &gt; 0.5 = ', random &gt; 0.5);
-console.log('random &gt;= 0.5 = ', random &gt;= 0.5);
+<h2 id="greater-than-and-greater-than-or-equal---"><a class="header" href="#greater-than-and-greater-than-or-equal---">Greater than and Greater than or equal <code>&gt;</code> &amp; <code>&gt;=</code></a></h2>
+<pre><code class="language-javascript editable">console.log('5 &gt; 5 = ', 5 &gt; 5);
+console.log('5 &gt;= 5 = ', 5 &gt;= 5);
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="logical-1"><a class="header" href="#logical-1">Logical</a></h1>
-<h2 id="not--1"><a class="header" href="#not--1">NOT (<code>!</code>)</a></h2>
-<h2 id="or--1"><a class="header" href="#or--1">OR (<code>||</code>)</a></h2>
-<p>The <strong>NOT</strong>(<code>!</code>) is operating on only 1 operand, but the <strong>OR</strong>(<code>||</code>) needs 2 operand. That means there 4 possible scenarios. Both of them are <code>true</code>, either 1 one them is <code>true</code> and none of them are <code>true</code>.</p>
+<p>Now we know the NOT (<code>!</code>) Operator and all the <a href="js-by-example-for-noob/operators/">Comparison Operators</a>. These two operators are just logical (pun intended).</p>
+<h2 id="or-"><a class="header" href="#or-">OR (<code>||</code>)</a></h2>
+<!-- The **NOT**(`!`) is operating on only 1 operand, but the **OR**(`||`) needs 2 operand. That means there 4 possible scenarios. Both of them are `true`, either 1 one them is `true` and none of them are `true`. -->
+<pre><code class="language-javascript editable">const num = 7;
+console.log(num &lt; 5 || num &gt; 10);
+</code></pre>
+<p>So, if either of them is <code>true</code>, the output is <code>true</code>. And it's only <code>false</code> when both <em>(all)</em> of them are <code>false</code>.</p>
 <pre><code class="language-javascript editable">console.log('true || true = ', true || true);
 console.log('true || false = ', true || false);
 console.log('false || true = ', false || true);
 console.log('false || false = ', false || false);
 </code></pre>
-<p>So, if either of them is <code>true</code>, the output is <code>true</code>. And it's only <code>false</code> when both <em>(all)</em> of them are <code>false</code></p>
-<h2 id="and--1"><a class="header" href="#and--1">AND (<code>&amp;&amp;</code>)</a></h2>
-<p>Now, this is very similar to <strong>OR</strong>(<code>||</code>). Let's all the 4 possible scenarios for this as well.</p>
+<p>This is called truth table. Which shows how the OR operator with respond all 4 possible case.</p>
+<h2 id="and-"><a class="header" href="#and-">AND (<code>&amp;&amp;</code>)</a></h2>
+<p>Now, this is very similar to <strong>OR</strong>(<code>||</code>).</p>
+<pre><code class="language-javascript editable">const num = 7;
+console.log(num &gt; 5 &amp;&amp; num &lt; 10 &amp;&amp; num &lt; 15);
+</code></pre>
+<p>So, it returns <code>true</code> only when both <em>(all)</em> of them are <code>true</code>.</p>
+<blockquote>
+<p>Don't forget to play with example. What will happen if you replace <code>7</code> with <code>11</code>.</p>
+</blockquote>
+<p>Let's all the 4 possible scenarios for this as well. Assuming we have 2 operands.</p>
 <pre><code class="language-javascript editable">console.log('true &amp;&amp; true = ', true &amp;&amp; true);
 console.log('true &amp;&amp; false = ', true &amp;&amp; false);
 console.log('false &amp;&amp; true = ', false &amp;&amp; true);
 console.log('false &amp;&amp; false = ', false &amp;&amp; false);
 </code></pre>
-<p>So, it returns <code>true</code> only when both <em>(all)</em> of them are <code>true</code>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="flow-of-control"><a class="header" href="#flow-of-control">Flow of Control</a></h1>
 <p>An integral part of any programming language are ways to modify control flow: if/else, for, and others.</p>
 <ul>

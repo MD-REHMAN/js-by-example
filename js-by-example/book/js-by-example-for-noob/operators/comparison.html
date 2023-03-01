@@ -145,25 +145,38 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="comparison-operators"><a class="header" href="#comparison-operators">Comparison Operators</a></h1>
-<p>You guessed it, they're used to compare 2 operands. Let's look at how they work in JavaScript.</p>
-<h2 id="equal-to---"><a class="header" href="#equal-to---">Equal to (<code>==</code> &amp; <code>===</code>)</a></h2>
+<p>They're used to compare 2 operands. Let's look at how they work in JavaScript.</p>
+<h2 id="inequality---"><a class="header" href="#inequality---">Inequality (<code>!=</code> &amp; <code>!==</code>)</a></h2>
+<p>We have seen the <strong>NOT(!)</strong> operator just now. So, based on that <code>!=</code> means NOT-Equal.
+But why the second operator have 2 equal sign?
+Let's run the code and understand the difference.</p>
+<pre><code class="language-javascript editable">console.log('&quot;10&quot; != 10 = ', &quot;10&quot; != 10);
+console.log('&quot;10&quot; !== 10 = ', &quot;10&quot; !== 10);
+</code></pre>
+<p>Lets break down what's happening. So in both the cases, we are comparing <code>&quot;10&quot;</code> which is a <em>string</em> with <code>10</code> which is a <em>number</em>.</p>
+<p>In the first case, JavaScript converts the <em>number</em> to <em>string</em>. And thus we get <code>false</code>. If you want to know why number got converted to string and not the other way around, then check <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Equality">MDN Docs</a>.</p>
+<p>But in the second case, since they are not of the same type, we get <code>true</code> meaning they are not equal.</p>
+<blockquote>
+<p>A general thumb rule, use <code>!==</code>(strict equality) over <code>!=</code>(equality).</p>
+</blockquote>
+<p>With this out of the way, the rest of the example will be self explanatory. Don't forget to try different value in the example.</p>
+<h2 id="equality---"><a class="header" href="#equality---">Equality (<code>==</code> &amp; <code>===</code>)</a></h2>
+<p>Now, this operator is obvious.</p>
+<blockquote>
+<p>NOTE:
+The single (<code>=</code>) sign is used for <a href="">Assignment Operator</a>.</p>
+</blockquote>
 <pre><code class="language-javascript editable">console.log('&quot;10&quot; == 10 = ', &quot;10&quot; == 10);
 console.log('&quot;10&quot; === 10 = ', &quot;10&quot; === 10);
 </code></pre>
-<h2 id="not-equal-to---"><a class="header" href="#not-equal-to---">Not Equal to (<code>!=</code> &amp; <code>!==</code>)</a></h2>
-<pre><code class="language-javascript editable">
-// Comparison Operators
-console.log('&quot;10&quot; != 10 = ', &quot;10&quot; != 10);
-console.log('&quot;10&quot; !== 10 = ', &quot;10&quot; !== 10);
-</code></pre>
-<h2 id="less-than-and-less-than-equal-to---"><a class="header" href="#less-than-and-less-than-equal-to---">Less than and Less than equal to (<code>&lt;</code> &amp; <code>&lt;=</code>)</a></h2>
+<h2 id="less-than-and-less-than-or-equal---"><a class="header" href="#less-than-and-less-than-or-equal---">Less than and Less than or equal (<code>&lt;</code> &amp; <code>&lt;=</code>)</a></h2>
 <pre><code class="language-javascript editable">// Comparison Operators
-console.log('random &lt; 0.5 = ', random &lt; 0.5);
-console.log('random &gt;= 0.5 = ', random &gt;= 0.5);
+console.log('5 &lt; 5 = ', 5 &lt; 5);
+console.log('5 &gt;= 5 = ', 5 &lt;= 5);
 </code></pre>
-<h2 id="greater-than-and-greater-than-equal-to--"><a class="header" href="#greater-than-and-greater-than-equal-to--">Greater than and Greater than equal to<code>&gt;</code> &amp; <code>&gt;=</code></a></h2>
-<pre><code class="language-javascript editable">console.log('random &gt; 0.5 = ', random &gt; 0.5);
-console.log('random &gt;= 0.5 = ', random &gt;= 0.5);
+<h2 id="greater-than-and-greater-than-or-equal---"><a class="header" href="#greater-than-and-greater-than-or-equal---">Greater than and Greater than or equal <code>&gt;</code> &amp; <code>&gt;=</code></a></h2>
+<pre><code class="language-javascript editable">console.log('5 &gt; 5 = ', 5 &gt; 5);
+console.log('5 &gt;= 5 = ', 5 &gt;= 5);
 </code></pre>
 
                     </main>

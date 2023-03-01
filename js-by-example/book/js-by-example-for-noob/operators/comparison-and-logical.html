@@ -177,7 +177,7 @@ There was specific reason why I overloaded you with that much information in the
 console.log('!false = ', !false);
 </code></pre>
 <p>Did you get it?
-If not, try reading it out <strong>!true</strong> =&gt; <strong>NOTtrue</strong>. Meaning if it is not <code>true</code>, then it much be <code>false</code>.
+If not, try reading it out <strong>!true</strong> =&gt; <strong>NOTtrue</strong>. Meaning if it is not <code>true</code>, then it must be <code>false</code>. Therefore,
 If you put <code>!</code> before <code>true</code>, it makes it <code>false</code> and vice-versa.
 But that's for boolean, how about numbers?
 Try guessing the output before running the example.</p>
@@ -190,42 +190,6 @@ This is happening because in javascript every value is either <a href="https://d
 <p>Remember all the <a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy">Falsy</a> values, all the other value should be <a href="https://developer.mozilla.org/en-US/docs/Glossary/Truthy">Truthy</a>.</p>
 </blockquote>
 <p>Before proceeding with the rest of <a href="">Logical</a> operators, we'll understand the <a href="">Comparison</a> operators.</p>
-<h3 id="or-"><a class="header" href="#or-">OR (<code>||</code>)</a></h3>
-<p>The <strong>NOT</strong>(<code>!</code>) is operating on only 1 operand, but the <strong>OR</strong>(<code>||</code>) needs 2 operand. That means there 4 possible scenarios. Both of them are <code>true</code>, either 1 one them is <code>true</code> and none of them are <code>true</code>.</p>
-<pre><code class="language-javascript editable">console.log('true || true = ', true || true);
-console.log('true || false = ', true || false);
-console.log('false || true = ', false || true);
-console.log('false || false = ', false || false);
-</code></pre>
-<p>So, if either of them is <code>true</code>, the output is <code>true</code>. And it's only <code>false</code> when both <em>(all)</em> of them are <code>false</code></p>
-<h3 id="and-"><a class="header" href="#and-">AND (<code>&amp;&amp;</code>)</a></h3>
-<p>Now, this is very similar to <strong>OR</strong>(<code>||</code>). Let's all the 4 possible scenarios for this as well.</p>
-<pre><code class="language-javascript editable">console.log('true &amp;&amp; true = ', true &amp;&amp; true);
-console.log('true &amp;&amp; false = ', true &amp;&amp; false);
-console.log('false &amp;&amp; true = ', false &amp;&amp; true);
-console.log('false &amp;&amp; false = ', false &amp;&amp; false);
-</code></pre>
-<p>So, it returns <code>true</code> only when both <em>(all)</em> of them are <code>true</code>.</p>
-<h2 id="comparison"><a class="header" href="#comparison">Comparison</a></h2>
-<h3 id="equal-to---"><a class="header" href="#equal-to---">Equal to (<code>==</code> &amp; <code>===</code>)</a></h3>
-<pre><code class="language-javascript editable">console.log('&quot;10&quot; == 10 = ', &quot;10&quot; == 10);
-console.log('&quot;10&quot; === 10 = ', &quot;10&quot; === 10);
-</code></pre>
-<h3 id="not-equal-to---"><a class="header" href="#not-equal-to---">Not Equal to (<code>!=</code> &amp; <code>!==</code>)</a></h3>
-<pre><code class="language-javascript editable">
-// Comparison Operators
-console.log('&quot;10&quot; != 10 = ', &quot;10&quot; != 10);
-console.log('&quot;10&quot; !== 10 = ', &quot;10&quot; !== 10);
-</code></pre>
-<h3 id="less-than-and-less-than-equal-to---"><a class="header" href="#less-than-and-less-than-equal-to---">Less than and Less than equal to (<code>&lt;</code> &amp; <code>&lt;=</code>)</a></h3>
-<pre><code class="language-javascript editable">// Comparison Operators
-console.log('random &lt; 0.5 = ', random &lt; 0.5);
-console.log('random &gt;= 0.5 = ', random &gt;= 0.5);
-</code></pre>
-<h3 id="greater-than-and-greater-than-equal-to--"><a class="header" href="#greater-than-and-greater-than-equal-to--">Greater than and Greater than equal to<code>&gt;</code> &amp; <code>&gt;=</code></a></h3>
-<pre><code class="language-javascript editable">console.log('random &gt; 0.5 = ', random &gt; 0.5);
-console.log('random &gt;= 0.5 = ', random &gt;= 0.5);
-</code></pre>
 
                     </main>
 
