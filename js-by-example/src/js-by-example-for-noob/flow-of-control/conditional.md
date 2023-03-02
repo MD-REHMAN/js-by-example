@@ -11,6 +11,8 @@ if (7 % 2 === 0) {
   console.log('7 is odd')
 }
 
+
+
 // You can have if without else
 if (8 % 4 === 0) {
   console.log('8 is divisible by 4')
