@@ -1,8 +1,14 @@
 # Conditionals
 
+Conditionals are used to create branches in the flow of your code. JavaScript provides 2 types of conditional they are
+
+- If/else
+  - Ternary
+- switch
+
 ## If / else
 
-Branching with if-else is similar to other languages.
+If/else are one most used conditions
 
 ```javascript,editable
 if (7 % 2 === 0) {
@@ -10,15 +16,16 @@ if (7 % 2 === 0) {
 } else {
   console.log('7 is odd')
 }
+```
 
-
-
+```javascript,editable
 // You can have if without else
 if (8 % 4 === 0) {
   console.log('8 is divisible by 4')
 }
+```
 
-// Many branches
+```javascript,editable
 const duck = 'blue';
 if (duck === 'yellow') {
   console.log('Rubber ducky')

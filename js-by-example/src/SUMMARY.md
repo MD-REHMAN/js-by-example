@@ -22,12 +22,12 @@
     - [Comparison](js-by-example-for-noob/operators/comparison.md)
     - [Logical](js-by-example-for-noob/operators/logical.md)
 
+  - [Function](js-by-example-for-noob/function.md)
+
   - [Flow of Control](js-by-example-for-noob/flow-of-control.md)
 
     - [Conditionals](js-by-example-for-noob/flow-of-control/conditional.md)
     - [Iterative](js-by-example-for-noob/flow-of-control/iterative.md)
-
-  - [Function](js-by-example-for-noob/function.md)
 
   - [Exercise]()
     - [Guess the output]()
