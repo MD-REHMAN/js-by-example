@@ -8,7 +8,7 @@ Conditionals are used to create branches in the flow of your code. JavaScript pr
 
 ## If / else
 
-If/else are one most used conditions
+If/else are one most used conditions statement. Let's have a look.
 
 ```javascript,editable
 if (7 % 2 === 0) {
@@ -17,6 +17,15 @@ if (7 % 2 === 0) {
   console.log('7 is odd')
 }
 ```
+
+Let's break it down just like did to functions.
+
+- `if`: This is the keyword (reserved word) used to define.
+- `(7 % 2 === 0)`: These can further be divided in 2 types
+  - `7 % 2 === 0`: These are called **parameters**, here we have 2 of them separated by a **,**. These are also know as **inputs**
+  - `()`: All the **parameters** are wrapper by them.
+- `else`: This is the keyword (reserved word) used to define.
+- `{}`: These represent the body of the `if` and `else`. when the condition is true, code withing if block will get execute or the code with within `else` block will get executed.
 
 ```javascript,editable
 // You can have if without else

@@ -45,5 +45,5 @@ console.log(result);
 
 There are two things to note in the above code.
 
-- Just like any other value, functions can also be assigned to a variable. And you call them using this variable name, as well as the old name
+- Just like any other value, functions can also be assigned to a variable. And you call them using this variable name, as well as the old name.
 - Remember just like objects, by assigning functions to a variable we are not copying it, instead just passing its reference.
