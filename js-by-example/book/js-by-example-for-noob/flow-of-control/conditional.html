@@ -179,6 +179,8 @@ if (8 % 4 === 0) {
   console.log('8 is divisible by 4')
 }
 </code></pre>
+<p>You don't always have to use <code>else</code></p>
+<p>What if, we want to create more than 2 branches. Well you can use <code>else if</code></p>
 <pre><code class="language-javascript editable">const duck = 'blue';
 if (duck === 'yellow') {
   console.log('Rubber ducky')
@@ -188,8 +190,9 @@ if (duck === 'yellow') {
   console.log('Ive never seen a blue duck before.')
 }
 </code></pre>
-<h3 id="ternary"><a class="header" href="#ternary">Ternary</a></h3>
-<p>These are short hand notation for if/else.</p>
+<p>Here each condition will be checked till atleast anyone of them checks out. And if all of them are fails, then the else section will be executed.</p>
+<h3 id="ternary-operator"><a class="header" href="#ternary-operator">Ternary Operator</a></h3>
+<p>Ternary Operator is short hand notation for if/else.</p>
 <pre><code class="language-javascript editable">const true_value = true ? &quot;I am True&quot; : &quot;I am False&quot;;
 const false_value = false ? &quot;I am True&quot; : &quot;I am False&quot;;
 
@@ -199,7 +202,7 @@ console.log(&quot;false_value = &quot;, false_value);
 </code></pre>
 <h2 id="switch"><a class="header" href="#switch">Switch</a></h2>
 <p>Switch statements are conditionals that may have many branches (like if / else if).
-Switch statements are more performant bu less flexible.</p>
+Switch statements are more performant but less flexible.</p>
 <pre><code class="language-javascript editable">// a simple switch statment
 const fruit = 'banana'
 switch (fruit) {

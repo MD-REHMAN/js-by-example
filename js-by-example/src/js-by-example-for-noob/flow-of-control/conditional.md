@@ -34,6 +34,10 @@ if (8 % 4 === 0) {
 }
 ```
 
+You don't always have to use `else`
+
+What if, we want to create more than 2 branches. Well you can use `else if`
+
 ```javascript,editable
 const duck = 'blue';
 if (duck === 'yellow') {
@@ -45,9 +49,11 @@ if (duck === 'yellow') {
 }
 ```
 
-### Ternary
+Here each condition will be checked till atleast anyone of them checks out. And if all of them are fails, then the else section will be executed.
 
-These are short hand notation for if/else.
+### Ternary Operator
+
+Ternary Operator is short hand notation for if/else.
 
 ```javascript,editable
 const true_value = true ? "I am True" : "I am False";
@@ -61,7 +67,7 @@ console.log("false_value = ", false_value);
 ## Switch
 
 Switch statements are conditionals that may have many branches (like if / else if).
-Switch statements are more performant bu less flexible.
+Switch statements are more performant but less flexible.
 
 ```javascript,editable
 // a simple switch statment
