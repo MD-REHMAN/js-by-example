@@ -744,6 +744,23 @@ console.log(&quot;false_value = &quot;, false_value);
 <h2 id="switch"><a class="header" href="#switch">Switch</a></h2>
 <p>Switch statements are conditionals that may have many branches (like if / else if).
 Switch statements are more performant but less flexible.</p>
+<!-- Simple Example -->
+<pre><code class="language-javascript editable">// a simple switch statment
+const fruit = 'banana'
+switch (fruit) {
+  case 'blueberry':
+    console.log('blue')
+    // everything after the true case executes
+    // use 'break' if you aren't returning a value
+    break;
+  case 'banana':
+    console.log('yellow')
+    break;
+  default:
+    console.log('not blue, yellow or red')
+}
+</code></pre>
+<!-- Example without break -->
 <pre><code class="language-javascript editable">// a simple switch statment
 const fruit = 'banana'
 switch (fruit) {
