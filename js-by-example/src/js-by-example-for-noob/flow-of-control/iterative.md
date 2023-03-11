@@ -1,6 +1,14 @@
 # Loops
 
+Loops are used to create loop in your code. JavaScript provides 3 types of loops and they are
+
+- For
+- While
+- Do while
+
 ## For
+
+One of most used loops of all time.
 
 ```javascript,editable
 // for(declaration; condition; increment)
@@ -15,6 +23,14 @@ Let's understand it's syntax.
 - `let i=0` or **declaration**: These can further be divided in 2 types
 - `i<7` or **condition**: This is the keyword (reserved word) used to define.
 - `i++` or **increment**: These represent the body of the `if` and `else`. when the condition is true, code withing if block will get execute or the code with within `else` block will get executed.
+
+```javascript,editable
+// Is it a valid loops
+for(let i=0; i<7;) {
+  console.log("i = ", i)
+}
+// Don't run it.
+```
 
 ## While
 

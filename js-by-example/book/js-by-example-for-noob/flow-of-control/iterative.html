@@ -145,7 +145,14 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="loops"><a class="header" href="#loops">Loops</a></h1>
+<p>Loops are used to create loop in your code. JavaScript provides 3 types of loops and they are</p>
+<ul>
+<li>For</li>
+<li>While</li>
+<li>Do while</li>
+</ul>
 <h2 id="for"><a class="header" href="#for">For</a></h2>
+<p>One of most used loops of all time.</p>
 <pre><code class="language-javascript editable">// for(declaration; condition; increment)
 for(let i=0; i&lt;7; i++) {
   console.log(&quot;i = &quot;, i)
@@ -158,6 +165,12 @@ for(let i=0; i&lt;7; i++) {
 <li><code>i&lt;7</code> or <strong>condition</strong>: This is the keyword (reserved word) used to define.</li>
 <li><code>i++</code> or <strong>increment</strong>: These represent the body of the <code>if</code> and <code>else</code>. when the condition is true, code withing if block will get execute or the code with within <code>else</code> block will get executed.</li>
 </ul>
+<pre><code class="language-javascript editable">// Is it a valid loops
+for(let i=0; i&lt;7;) {
+  console.log(&quot;i = &quot;, i)
+}
+// Don't run it.
+</code></pre>
 <h2 id="while"><a class="header" href="#while">While</a></h2>
 <p>The <code>while</code> keyword can be used to run a loop while a condition is <code>true</code>.</p>
 <pre><code class="language-javascript editable">let i=0;
