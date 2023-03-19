@@ -39,20 +39,22 @@ Let's look at different type of strings.
 
 ```javascript,editable
 console.log(typeof "hello!!")
-// string
+```
 
+```javascript,editable
 console.log(typeof "7")
-// string
+```
 
+```javascript,editable
 console.log(typeof "")
-// string
+```
 
+```javascript,editable
 console.log(typeof " ")
-// string
+```
 
+```javascript,editable
 console.log(typeof new Date())
-// string
-
 ```
 
 ### Numbers
@@ -64,7 +66,9 @@ console.log(7)
 // number
 console.log(3.14159265359)
 // number
+```
 
+```javascript,editable
 // But what's the limit, well you can check like this
 console.log(Number.MAX_SAFE_INTEGER)
 // 9007199254740991

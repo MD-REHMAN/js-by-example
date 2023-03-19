@@ -20,7 +20,7 @@ Let's understand what is happening. The above code can be broken down into 3 par
 
 ### `console`<br/>
 
-It is one the Global object, which provides us with methods to interact with console.
+It is one of the Global object, which provides us with methods to interact with console.
 
 To open console just press `Option + ⌘ + J` (on macOS), or `Shift + CTRL + J` (on Windows/Linux). And re-run the code. You'll see `Hello World` there as well.
 
@@ -28,7 +28,7 @@ We'll look this in detail when we start with [object]().
 
 ### `log`
 
-It is one the methods in the `console` object, which let us write on console.
+It is one the methods in the `console` object, which let's write on console.
 
 ### `"Hello World"`
 
