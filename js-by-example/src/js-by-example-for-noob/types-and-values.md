@@ -85,11 +85,8 @@ They are rather simple, they can only be `true` and `false`.
 
 ```javascript,editable
 console.log(typeof true)
-// boolean
 
 console.log(typeof false)
-// boolean
-
 ```
 
 ## [Objects]()
@@ -99,17 +96,14 @@ Objects are variables that contain multiple data values. The values within a JS 
 Objects are first **Reference value/type** we have encountered so far. Just keep that in mind we'll discuss it later.
 
 ```javascript,editable
-
 // Objects are defined using `{}`, and between those parenthesis lies key-value pairs.
 console.log(typeof {key1: "value1", key2: "value2"})
 
 // Well Arrays are also objects
 console.log(typeof [])
-// object
 
 // And so is null
 console.log(typeof null)
-// object
 ```
 
 ### Undefined & Null
